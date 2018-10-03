@@ -1,7 +1,7 @@
 import React from 'react';
 // importing Radium
 // import Radium, {  }from 'radium'; // styleRoot is a named export from
-import './Person.css';
+import classes from './Person.css';
 // Using ES6 function decalaration  
 const person = (props) => {
     // const style = {
@@ -10,7 +10,7 @@ const person = (props) => {
     //     }
     // };
     return(
-        <div className="Person">
+        <div className={classes.Person}>
             {/* // Using a CLick listener with the click prop */}
             <p onClick={props.click}>I am {props.name} and I am {props.age} years old!</p>
             <p>{props.children}</p>

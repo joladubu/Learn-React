@@ -6,7 +6,7 @@
 //Component is an object or class
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import classes from './App.css';
 // Importing Radium 
 // import Radium, { StyleRoot }from 'radium'; // Radium is the default export and styleRoot is a named export from the radium package
 // Importing the JS file Person.js
@@ -159,23 +159,23 @@ class App extends Component {
     /** 
      * .join() joins the strings with an empty space
      */ 
-    const classes = [];
+    const assignedClasses = [];
     // const classes = ['red', 'bold'].join(' ');// "red bold"
     if (this.state.persons.length <=2) {
       // push the red calss foth array
-      classes.push('red'); // classes =  ['red']
+      assignedClasses.push( classes.red ); // classes =  ['red']
     }
     if (this.state.persons.length <=1) {
-      classes.push('bold'); // classes =  ['red', 'bold']
+      assignedClasses.push( classes.bold ); // classes =  ['red', 'bold']
     }
  
 
 
     return (
       
-        <div className="App">
+        <div className={ classes.App }>
           <h1>Hi, I'm a React App</h1>
-          <p className={classes.join(' ')}>This is really working</p> 
+          <p className={assignedClasses.join( ' ' )}>This is really working</p> 
           {/* referencing the switchHandleer Method not using the () as to avoid its instant execution upon page rendering*/}
           <button 
           // scoping the inline style declared above to the button
